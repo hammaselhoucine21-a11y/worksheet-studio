@@ -18,7 +18,7 @@ Undo/Redo are always at the top, and work is saved automatically on the computer
 
 1. Get the app:
    - **Easiest:** on the GitHub page, click **Code → Download ZIP**, then right-click the ZIP and choose **Extract All**, for example to `Documents\worksheet-studio`.
-   - Or, with Git: `git clone <this repo's URL>`
+   - Or, with Git: `git clone https://github.com/hammaselhoucine21-a11y/worksheet-studio.git`
 2. Open the folder and double-click **`install.bat`**.
    - If Node.js is missing, it installs it, then asks you to run `install.bat` again.
    - It downloads the magic-eraser AI model once (about 200 MB), builds the app, and puts a **Worksheet Studio** icon on the Desktop.
