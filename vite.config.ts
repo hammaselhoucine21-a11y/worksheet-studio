@@ -10,11 +10,13 @@ const headers = {
 }
 
 export default defineConfig({
+  // GitHub Pages serves the app from /worksheet-studio/; the local install serves it from /.
+  base: process.env.BASE_PATH || '/',
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icon.svg'],
+      includeAssets: ['icon.svg', 'apple-touch-icon.png'],
       manifest: {
         name: 'Worksheet Studio',
         short_name: 'Worksheets',
@@ -22,7 +24,11 @@ export default defineConfig({
         theme_color: '#e8505b',
         background_color: '#fffaf6',
         display: 'standalone',
-        icons: [{ src: 'icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' }],
+        icons: [
+          { src: 'icon-192.png', sizes: '192x192', type: 'image/png' },
+          { src: 'icon-512.png', sizes: '512x512', type: 'image/png' },
+          { src: 'icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' },
+        ],
       },
       workbox: {
         globPatterns: ['**/*.{js,mjs,css,html,svg,woff,woff2,wasm}'],

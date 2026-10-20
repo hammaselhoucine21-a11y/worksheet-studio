@@ -45,6 +45,7 @@ button {
   font: inherit;
   color: inherit;
   cursor: pointer;
+  touch-action: manipulation; /* no double-tap zoom on iPhone/iPad */
 }
 
 button:disabled {

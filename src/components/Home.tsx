@@ -74,7 +74,7 @@ export function Home({ onOpen }: { onOpen: (p: OpenProject) => void }) {
       }}
     >
       <header className="home-head">
-        <img src="/icon.svg" alt="" width={56} height={56} />
+        <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="" width={56} height={56} />
         <div>
           <h1>Worksheet Studio</h1>
           <p>Crop, clean up and change any worksheet picture.</p>

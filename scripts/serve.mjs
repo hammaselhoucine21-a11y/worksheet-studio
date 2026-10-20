@@ -29,7 +29,10 @@ function openBrowser() {
   if (process.platform === 'win32') {
     // Edge "app" window looks like a normal program; fall back to the default browser.
     exec(`start "" msedge --app=${url}`, (err) => err && exec(`start "" ${url}`))
-  } else exec(`${process.platform === 'darwin' ? 'open' : 'xdg-open'} ${url}`)
+  } else if (process.platform === 'darwin') {
+    // Chrome's app window if installed, otherwise the default browser (Safari).
+    exec(`open -na "Google Chrome" --args --app=${url}`, (err) => err && exec(`open ${url}`))
+  } else exec(`xdg-open ${url}`)
 }
 
 if (!existsSync(join(root, 'index.html'))) {

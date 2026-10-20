@@ -26,6 +26,28 @@ Undo/Redo are always at the top, and work is saved automatically on the computer
 
 Later updates: double-click **`update.bat`** (needs Git), or download the ZIP again and re-run `install.bat`.
 
+## Use it online (any computer, iPhone, iPad): no install
+
+Open **https://hammaselhoucine21-a11y.github.io/worksheet-studio/** in Safari, Chrome or Edge.
+
+- **iPhone / iPad:** open the link in **Safari**, tap **Share** (the square with the arrow), then **Add to Home Screen**. It gets its own icon and opens full screen like an app.
+- The magic-eraser AI downloads once (about 200 MB, Wi-Fi recommended) the first time you press **Erase**, and is kept after that.
+- On older iPhones the AI may be too big to run. The app then uses the quick fill, which works well on plain white paper. iPads and newer iPhones handle it better.
+- Your pictures never leave the device: all editing happens on the phone or computer itself.
+
+## Install on a Mac (free)
+
+Works on macOS 11 Big Sur or newer (Intel and Apple Silicon). On older Macs, use the website above.
+
+1. On the GitHub page, click **Code → Download ZIP**, then double-click the ZIP to unpack it (for example into **Documents**).
+2. Open the folder, **right-click `install.command` → Open**, then click **Open** again.
+   (The first time, macOS asks because the file came from the internet. If it still refuses, open **Terminal**, type `bash ` (with a space), drag `install.command` into the window, and press Return.)
+   - If Node.js is missing, it downloads the installer. Finish it, then run `install.command` again.
+   - It downloads the AI model, builds the app, and adds **Worksheet Studio** to **Applications** (in your home folder) and the Desktop.
+3. Double-click **Worksheet Studio**. It opens in Chrome's app window if Chrome is installed, otherwise in Safari.
+
+Updates: double-click **`update.command`**.
+
 ## Tips for the magic eraser
 
 - Erasing takes about 15–30 seconds on a normal PC; a spinner shows while it works.
@@ -58,4 +80,6 @@ src/
                lama (AI client), export (PDF/print/PNG), storage (IndexedDB), stickers
   workers/     lama.worker.ts (onnxruntime-web)
 scripts/       get-model.mjs, serve.mjs, make-shortcut.ps1
+install.bat / install.command   Windows / Mac installers
+.github/workflows/pages.yml     publishes the website on every push to main
 ```
