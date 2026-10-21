@@ -30,7 +30,12 @@ Later updates: double-click **`update.bat`** (needs Git), or download the ZIP ag
 
 Open **https://hammaselhoucine21-a11y.github.io/worksheet-studio/** in Safari, Chrome or Edge.
 
-- **iPhone / iPad:** open the link in **Safari**, tap **Share** (the square with the arrow), then **Add to Home Screen**. It gets its own icon and opens full screen like an app.
+- **iPhone / iPad:** open the link in **Safari**, then:
+  1. Tap the **⋯** (three dots) button next to the address bar, then **Share**. (On older iOS versions, the Share button is the square with the arrow.)
+  2. Scroll down and tap **Add to Home Screen**. If it isn't there, scroll to the bottom, tap **Edit Actions**, and add **Add to Home Screen**.
+  3. Turn on **Open as Web App**, then tap **Add**.
+
+  It gets its own icon and opens full screen like an app.
 - The magic-eraser AI downloads once (about 200 MB, Wi-Fi recommended) the first time you press **Erase**, and is kept after that.
 - On older iPhones the AI may be too big to run. The app then uses the quick fill, which works well on plain white paper. iPads and newer iPhones handle it better.
 - Your pictures never leave the device: all editing happens on the phone or computer itself.
